@@ -1,0 +1,129 @@
+/* Inserindo nova font-family */
+@font-face {
+    font-family: 'Epilogue';
+    src: url(fonts/Epilogue-VariableFont_wght.ttf);
+}
+
+body {
+    /*Posicionamento*/
+    display: flex;
+    flex-direction: column;
+
+    /* Texto */
+    text-align: left;
+    font-family: 'Epilogue';
+
+    /* flexbox */
+    margin: 6vh 5vw;
+
+    /* cores */
+    background-color: #ECE9FD;
+
+}
+
+/* Media Querie */
+@media (min-width: 840px) {
+    body {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 80vh;
+    }
+
+    li {
+        /* flexbox */
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 839px) {
+    li {
+        /* flexbox */
+        margin-top: 20px;
+    }
+}
+
+/*----- Elementos da div -----*/
+
+div {
+    max-width: 500px;
+}
+
+h1,
+ol {
+    /* Texto */
+    font-size: 2.5rem;
+    line-height: 48px;
+    margin: 0;
+    font-weight: 800;
+}
+
+h1,
+ol,
+a {
+    /* cores */
+    color: #090039;
+}
+
+p {
+    /* cores */
+    color: rgba(10, 0, 57, 0.64);
+}
+
+p,
+a {
+    /* Texto */
+    font-size: 1rem;
+    line-height: 32px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+/*----- Elementos da lista -----*/
+
+ol {
+    /* Alterar marker da lista ordenada */
+    counter-reset: item;
+    list-style-type: none;
+
+    /*flexbox*/
+    padding: 0;
+    margin: 3.5vh;
+
+
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4vh;
+}
+
+li {
+    /*Display*/
+    display: flex;
+    align-items: center;
+    /* Texto */
+    font-size: 1.5rem;
+}
+
+li:before {
+    /* Alterar marker da lista ordenada */
+    content: counter(item) "  ";
+    counter-increment: item;
+    font-size: 4.5rem;
+
+    /* flexbox */
+    margin-right: 15px;
+}
+
+li:first-of-type::before {
+    /* preenchimento */
+    padding: 6px;
+}
